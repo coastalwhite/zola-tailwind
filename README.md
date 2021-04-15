@@ -63,8 +63,9 @@ Should be replaced with:
 </div>
 ```
 
-In order to add automatic deployment to Github Pages, add a `TOKEN` with `repo`
-(or `public_repo` for public repositories) access to the secrets.
+In order to add automatic deployment to Github Pages, add a Personal Access
+Token with `repo` (or `public_repo` for public repositories) access to the
+a repository secret called `TOKEN`.
 
 ## License
 
