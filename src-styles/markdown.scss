@@ -1,0 +1,168 @@
+.markdown {
+  @apply text-lg;
+  @apply font-serif;
+}
+
+/* Font class used for headers */
+.markdown-header {
+    @apply font-sans;
+}
+
+/* Base spacing between paragraph */
+.markdown-p-spacing {
+    @apply mb-4;
+}
+
+.markdown-list-styling {
+    @apply list-inside;
+    @apply markdown-p-spacing;
+}
+
+.markdown:last-child {
+    @apply mb-0;
+}
+
+/* Header styling */
+.markdown h1 {
+  @apply mb-6;
+  @apply text-5xl;
+}
+.markdown h2 {
+  @apply mb-5;
+  @apply text-4xl;
+}
+.markdown h3 {
+  @apply mb-4;
+  @apply text-3xl;
+}
+.markdown h4 {
+  @apply mb-3;
+  @apply text-2xl;
+}
+.markdown h5 {
+  @apply mb-2;
+  @apply text-xl;
+}
+.markdown h6 {
+  @apply mb-1;
+  @apply text-lg;
+}
+
+/* Highlighting styling */
+.markdown em {
+  @apply italic;
+}
+.markdown strong {
+  @apply font-bold;
+}
+.markdown del {
+  @apply line-through;
+}
+
+/* Link styling */
+.markdown a {
+  @apply underline;
+  @apply text-blue-400;
+}
+
+/* Code/Verbatim styling */
+.markdown pre {
+  @apply p-4;
+  @apply text-lg;
+  @apply font-mono;
+  @apply bg-gray-100;
+  @apply markdown-p-spacing;
+}
+.markdown code {
+  @apply px-1;
+  @apply font-mono;
+  @apply bg-gray-100;
+}
+
+/* Blockquote styling */
+.markdown blockquote {
+  @apply py-4;
+  @apply px-2;
+  @apply markdown-p-spacing;
+
+  @apply border-2;
+  @apply border-l-0;
+  @apply border-r-0;
+  @apply border-gray-900;
+
+  @apply bg-gray-400;
+  @apply bg-opacity-50;
+}
+/* Fix embedded blockquotes */
+.markdown blockquote>blockquote {
+    @apply ml-4;
+    @apply mt-1;
+    @apply mb-0;
+}
+
+/* List styling */
+.markdown ul {
+    @apply markdown-list-styling;
+    @apply list-disc;
+}
+.markdown ol {
+    @apply markdown-list-styling;
+    @apply list-decimal;
+}
+.markdown ul li > ul {
+    @apply ml-4;
+    @apply mb-0;
+}
+.markdown ol li > ol {
+    @apply ml-4;
+    @apply mb-0;
+}
+.markdown ol li p {
+    @apply inline;
+}
+
+/* Img styling */
+.markdown img {
+  @apply max-w-full;
+}
+
+/* Table Styling */
+.markdown p {
+    @apply markdown-p-spacing;
+}
+
+/* Table Styling */
+.markdown table {
+    @apply border-2;
+    @apply border-b-0;
+    @apply border-black;
+}
+.markdown table thead {
+    @apply border-b-4;
+    @apply border-black;
+}
+.markdown table tbody tr {
+    @apply border-b-2;
+    @apply border-black;
+}
+.markdown table tr th {
+    @apply border-r-2;
+    @apply border-black;
+    @apply px-1;
+}
+.markdown table tr th:last-of-type {
+    @apply border-r-0;
+}
+.markdown table tr td {
+    @apply border-r-2;
+    @apply border-black;
+    @apply px-1;
+}
+.markdown table tr td:last-of-type {
+    @apply border-r-0;
+}
+
+/* Footnote Styling */
+.markdown .footnote-definition p {
+    @apply inline;
+}

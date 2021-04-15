@@ -1,0 +1,17 @@
+# The URL the site will be built for
+base_url = "https://example.com"
+
+title = "Example Website"
+description = "Lipsum Ipsum"
+
+default_language = "en"
+
+compile_sass = false
+build_search_index = false
+
+[markdown]
+highlight_code = false
+
+[extra]
+keywords = ["put", "your", "pagewide", "keywords", "here"]
+author = "John Doe"
