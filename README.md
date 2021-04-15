@@ -64,8 +64,9 @@ Should be replaced with:
 ```
 
 In order to add automatic deployment to Github Pages, add a Personal Access
-Token with `repo` (or `public_repo` for public repositories) access to the
-a repository secret called `TOKEN`.
+Token with `repo` (or `public_repo` for public repositories) access to the a
+repository secret called `TOKEN`. Make sure the `base_url` in the *config.yml*
+matches the URL you are publishing to.
 
 ## License
 

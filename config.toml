@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://example.com"
+base_url = "https://coastalwhite.github.io/zola-tailwind"
 
 title = "Example Website"
 description = "Lipsum Ipsum"
