@@ -1,0 +1,65 @@
+{% import "macros.html" as macros %}
+
+<!DOCTYPE html>
+<html lang="{% if lang %}{{ lang }}{% else %}{{ config.default_language }}{% endif %}">
+
+<head>
+    {% set img_path = "imgs/og_img.png" %}
+
+    {% set meta_keywords = config.extra.keywords %}
+    {% set meta_author = config.extra.author %}
+
+    {% if page %}
+    {% set meta_title = page.title ~ ' - ' ~ config.title %}
+    {% set meta_description = page.description %}
+    {% if page.extra.static_image_path %}
+    {% set img_path = page.extra.static_image_path %}
+    {% endif %}
+
+    {% if page.extra.keywords %}
+    {% set meta_keywords = meta_keywords | concat(with=page.extra.keywords) %}
+    {% endif %}
+    {% else %}
+    {% set meta_title = config.title %}
+    {% set meta_description = config.description %}
+    {% endif %}
+
+    <title>{{ meta_title }}</title>
+
+    <!-- Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="title" content="{{ meta_title }}" />
+    <meta name="description" content="{{ meta_description }}" />
+    <meta name="keywords" content="{{ meta_keywords | join(sep=', ') }}" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{{get_url(path='favicons/favicon-16x16.png',
+                                            cachebust=true)}}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph Protocol -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ current_url }}" />
+    <meta property="og:title" content="{{ meta_title }}" />
+    <meta property="og:description" content="{{ meta_description }}" />
+    <meta property="og:image" content="{{get_url(path=img_path,cachebust=true)}}" />
+
+    <link rel="alternate" type="application/rss+xml" title="RSS feed" href="{{ config.base_url | safe }}/rss.xml" />
+
+    <!-- Stylesheets -->
+    <link href="{{get_url(path='styles/main.css',cachebust=true)}}" rel="stylesheet" type="text/css" />
+
+    {% block head %}
+    {% endblock head %}
+</head>
+
+<body>
+{% block body %}
+{% endblock body %}
+</body>
+
+</html>

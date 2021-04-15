@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container mx-auto">
+    <div class="markdown">
+        {{ section.content | safe }}
+    </div>
+</div>
+{% endblock body %}
