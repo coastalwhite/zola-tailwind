@@ -22,6 +22,18 @@ Documentation](https://www.getzola.org/documentation/getting-started/overview/)
 for an overview of usage and at the [TailwindCSS
 Documentation](https://tailwindcss.com/docs) for Tailwind usage.
 
+After first cloning this repository to your machine run:
+
+```bash
+yarn
+```
+
+or for NPM users
+
+```bash
+npm install
+```
+
 This template provides a few scripts to run from NPM/Yarn. This is done with
 
 **NPM:**
