@@ -18,7 +18,7 @@ jobs:
           node-version: '14'
       - run: npm install
       - name: Build TailwindCSS
-        run: npm run tailwind-build
+        run: npm run style-build
 
       - name: Zola Deploy
         uses: shalzz/zola-deploy-action@master
