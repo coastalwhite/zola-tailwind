@@ -3,23 +3,12 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-        "postcss": "postcss src-styles/base.scss --output static/styles/main.css --no-map",
-        "tailwind-build": "cross-env NODE_ENV=production yon run postcss",
-        "tailwind-watch": "yon run postcss --watch",
+        "style-build": "tailwindcss -i src-styles/base.scss -o static/styles/main.css --minify",
+        "style-watch": "tailwindcss -i src-styles/base.scss -o static/styles/main.css --watch",
         "zola-serve": "touch static/styles/main.css; zola serve",
-        "zola-build": "touch static/styles/main.css; zola build",
-        "serve": "concurrently --kill-others \"yon run tailwind-watch\" \"yon run zola-serve\"",
-        "build": "yon run tailwind-build; yon run zola-build"
+        "zola-build": "touch static/styles/main.css; zola build"
     },
     "devDependencies": {
-        "autoprefixer": "^10.2.5",
-        "concurrently": "^6.0.2",
-        "cross-env": "^7.0.3",
-        "postcss": "^8.2.8",
-        "postcss-cli": "^8.3.1",
-        "postcss-import": "^14.0.0",
-        "precss": "^4.0.0",
-        "tailwindcss": "^2.0.4",
-        "yarn-or-npm": "^3.0.1"
+        "tailwindcss": "^3.0"
     }
 }

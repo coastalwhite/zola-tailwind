@@ -50,12 +50,12 @@ yarn run <script-name>
 
 Here `<script-name>` can be one of the following scripts:
 
-* `serve` - Start a dummy webserver. Watch for both changes in stylesheets and
-  zola files. When changes happen: recompile the styling and the static files.
-* `build` - Create all the optimized files in the `public` folder.
-* `tailwind-watch` - Watch for changes in stylesheets. When changes happen:
+* `zola-serve` - Start a dummy webserver. Watch for changes in zola files. When
+  changes happen: recompile the styling and the static files.
+* `zola-build` - Create all the optimized files in the `public` folder.
+* `style-watch` - Watch for changes in stylesheets. When changes happen:
   recompile the styling files.
-* `tailwind-build` - Create all the optimized stylesheet files.
+* `style-build` - Create all the optimized stylesheet files.
 
 All the preset styling for Markdown is done in the `src-styles/markdown.scss`
 file and can be reached by adding the `markdown` class to the container. This
