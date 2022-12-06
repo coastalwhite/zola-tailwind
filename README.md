@@ -8,12 +8,11 @@ tags, basic Markdown styling and a GitHub Action to deploy to GitHub Pages.
 
 ## Dependencies
 
-In order to work with this project, both Zola and NPM/Yarn need to be accessible
-from your shell.
+In order to work with this project, both Zola and the standalone TailwindCSS CLI
+need to be accessible from your shell.
 
 * To install Zola look [here](https://www.getzola.org/documentation/getting-started/installation/).
-* To install NPM look [here](https://nodejs.org/en/download/).
-* To install Yarn look [here](https://yarnpkg.com/getting-started/install).
+* To install the TailwindCSS standalone CLI look [here](https://github.com/tailwindlabs/tailwindcss/releases/latest).
 
 ## Usage
 
@@ -22,40 +21,19 @@ Documentation](https://www.getzola.org/documentation/getting-started/overview/)
 for an overview of usage and at the [TailwindCSS
 Documentation](https://tailwindcss.com/docs) for Tailwind usage.
 
-After first cloning this repository to your machine run:
+To build the website, run:
 
 ```bash
-yarn
+tailwindcss -i src-styles/base.scss -o static/styles/main.css --minify
+zola build
 ```
 
-or for NPM users
+To start a local testing server and watch for changes, run:
 
 ```bash
-npm install
+tailwindcss -i src-styles/base.scss -o static/styles/main.css --watch &
+zola serve
 ```
-
-This template provides a few scripts to run from NPM/Yarn. This is done with
-
-**NPM:**
-
-```bash
-npm run <script-name>
-```
-
-**Yarn:**
-
-```bash
-yarn run <script-name>
-```
-
-Here `<script-name>` can be one of the following scripts:
-
-* `zola-serve` - Start a dummy webserver. Watch for changes in zola files. When
-  changes happen: recompile the styling and the static files.
-* `zola-build` - Create all the optimized files in the `public` folder.
-* `style-watch` - Watch for changes in stylesheets. When changes happen:
-  recompile the styling files.
-* `style-build` - Create all the optimized stylesheet files.
 
 All the preset styling for Markdown is done in the `src-styles/markdown.scss`
 file and can be reached by adding the `markdown` class to the container. This

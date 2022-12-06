@@ -12,13 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup NodeJS
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - run: npm install
-      - name: Build TailwindCSS
-        run: npm run style-build
+
+      # Download and run TailwindCSS
+      - name: TailwindCSS Build
+        run: |
+             curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/download/v3.2.4/tailwindcss-linux-x64
+             chmod +x tailwindcss-linux-x64
+             mv tailwindcss-linux-x64 /usr/local/bin/tailwindcss
+             tailwindcss -i src-styles/base.scss -o static/styles/main.css --minify
 
       - name: Zola Deploy
         uses: shalzz/zola-deploy-action@master
