@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    <title>Example Website</title>
+
+    <!-- Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="title" content="Example Website" />
+    <meta name="description" content="Lipsum Ipsum" />
+    <meta name="keywords" content="put, your, pagewide, keywords, here" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="https://coastalwhite.github.io/zola-tailwind/favicons/favicon-16x16.png?h=b470dfa1160cedc15eb4acd57908560c0d8a35712886ed6965156eacad46947f">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph Protocol -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https:&#x2F;&#x2F;coastalwhite.github.io&#x2F;zola-tailwind&#x2F;" />
+    <meta property="og:title" content="Example Website" />
+    <meta property="og:description" content="Lipsum Ipsum" />
+    <meta property="og:image" content="https://coastalwhite.github.io/zola-tailwind/imgs/og_img.png?h=192f8b4f81959b7bd10194749c34c25369b49c1d8e2e6a2d6e6b28a9688883f3" />
+
+    <link rel="alternate" type="application/rss+xml" title="RSS feed" href="https://coastalwhite.github.io/zola-tailwind/rss.xml" />
+
+    <!-- Stylesheets -->
+    <link href="https://coastalwhite.github.io/zola-tailwind/static/styles/main.css?h=214ff483523a2d6924efddb0dc12e44b0577b43822a9afbd95050cdb89fcbd0e" rel="stylesheet" type="text/css" />
+
+    
+    
+</head>
+
+<body>
+
+<div class="container mx-auto">
+    <div class="markdown">
+        <!-- Adapted from https://markdown-it.github.io/ -->
+<h1 id="h1-heading">h1 Heading</h1>
+<h2 id="h2-heading">h2 Heading</h2>
+<h3 id="h3-heading">h3 Heading</h3>
+<h4 id="h4-heading">h4 Heading</h4>
+<h5 id="h5-heading">h5 Heading</h5>
+<h6 id="h6-heading">h6 Heading</h6>
+<h2 id="horizontal-rules">Horizontal Rules</h2>
+<hr />
+<hr />
+<hr />
+<h2 id="emphasis">Emphasis</h2>
+<p><strong>This is bold text</strong></p>
+<p><strong>This is bold text</strong></p>
+<p><em>This is italic text</em></p>
+<p><em>This is italic text</em></p>
+<p><del>Strikethrough</del></p>
+<h2 id="blockquotes">Blockquotes</h2>
+<blockquote>
+<p>Blockquotes can also be nested...</p>
+<blockquote>
+<p>...by using additional greater-than signs right next to each other...</p>
+<blockquote>
+<p>...or with spaces between arrows.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="lists">Lists</h2>
+<p>Unordered</p>
+<ul>
+<li>Create a list by starting a line with <code>+</code>, <code>-</code>, or <code>*</code></li>
+<li>Sub-lists are made by indenting 2 spaces:
+<ul>
+<li>Marker character change forces new list start:
+<ul>
+<li>Ac tristique libero volutpat at</li>
+</ul>
+<ul>
+<li>Facilisis in pretium nisl aliquet</li>
+</ul>
+<ul>
+<li>Nulla volutpat aliquam velit</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Very easy!</li>
+</ul>
+<p>Ordered</p>
+<ol>
+<li>
+<p>Lorem ipsum dolor sit amet</p>
+</li>
+<li>
+<p>Consectetur adipiscing elit</p>
+</li>
+<li>
+<p>Integer molestie lorem at massa</p>
+</li>
+<li>
+<p>You can use sequential numbers...</p>
+</li>
+<li>
+<p>...or keep all the numbers as <code>1.</code></p>
+</li>
+</ol>
+<p>Start numbering with offset:</p>
+<ol start="57">
+<li>foo</li>
+<li>bar</li>
+</ol>
+<h2 id="code">Code</h2>
+<p>Inline <code>code</code></p>
+<p>Indented code</p>
+<pre><code>&#x2F;&#x2F; Some comments
+line 1 of code
+line 2 of code
+line 3 of code
+</code></pre>
+<p>Block code &quot;fences&quot;</p>
+<pre><code>Sample text here...
+</code></pre>
+<p>Syntax highlighting</p>
+<pre data-lang="js" class="language-js "><code class="language-js" data-lang="js">var foo = function (bar) {
+  return bar++;
+};
+
+console.log(foo(5));
+</code></pre>
+<h2 id="tables">Tables</h2>
+<table><thead><tr><th>Option</th><th>Description</th></tr></thead><tbody>
+<tr><td>data</td><td>path to data files to supply the data that will be passed into templates.</td></tr>
+<tr><td>engine</td><td>engine to be used for processing templates. Handlebars is the default.</td></tr>
+<tr><td>ext</td><td>extension to be used for dest files.</td></tr>
+</tbody></table>
+<p>Right aligned columns</p>
+<table><thead><tr><th style="text-align: right">Option</th><th style="text-align: right">Description</th></tr></thead><tbody>
+<tr><td style="text-align: right">data</td><td style="text-align: right">path to data files to supply the data that will be passed into templates.</td></tr>
+<tr><td style="text-align: right">engine</td><td style="text-align: right">engine to be used for processing templates. Handlebars is the default.</td></tr>
+<tr><td style="text-align: right">ext</td><td style="text-align: right">extension to be used for dest files.</td></tr>
+</tbody></table>
+<h2 id="links">Links</h2>
+<p><a href="http://duckduckgo.com">link text</a></p>
+<p><a href="http://duckduckgo.com/">link with title</a></p>
+<h2 id="images">Images</h2>
+<p><img src="https://octodex.github.com/images/minion.png" alt="Minion" />
+<img src="https://octodex.github.com/images/stormtroopocat.jpg" alt="Stormtroopocat" title="The Stormtroopocat" /></p>
+<p>Like links, Images also have a footnote style syntax</p>
+<p><img src="https://octodex.github.com/images/dojocat.jpg" alt="Alt text" title="The Dojocat" /></p>
+<p>With a reference later in the document defining the URL location:</p>
+<h3 id="footnotes">Footnotes</h3>
+<p>Footnote 1 link<sup class="footnote-reference"><a href="#first">1</a></sup>.</p>
+<p>Footnote 2 link<sup class="footnote-reference"><a href="#second">2</a></sup>.</p>
+<p>Duplicated footnote reference<sup class="footnote-reference"><a href="#second">2</a></sup>.</p>
+<div class="footnote-definition" id="first"><sup class="footnote-definition-label">1</sup>
+<p>Footnote <strong>can have markup</strong>
+and multiple paragraphs.</p>
+</div>
+<div class="footnote-definition" id="second"><sup class="footnote-definition-label">2</sup>
+<p>Footnote text.</p>
+</div>
+
+    </div>
+</div>
+
+</body>
+
+</html>
